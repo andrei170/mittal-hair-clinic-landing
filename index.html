@@ -57,8 +57,8 @@
       radial-gradient(360px 300px at 18% 86%,rgba(205,183,158,.18),transparent 62%),
       linear-gradient(160deg,#1c1f26,#101216 78%)}
   .hero-art .lines{position:absolute;inset:0;opacity:.5;background-image:linear-gradient(rgba(205,183,158,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(205,183,158,.08) 1px,transparent 1px);background-size:38px 38px;mask-image:radial-gradient(circle at 60% 35%,#000,transparent 78%)}
-  .hero-art .mark{position:absolute;top:50%;left:50%;transform:translate(-50%,-58%);font-family:var(--serif);font-size:120px;color:var(--champ);opacity:.9;text-shadow:0 0 60px rgba(201,168,106,.4)}
-  .hero-art .cap{position:absolute;left:0;right:0;bottom:0;padding:22px;background:linear-gradient(180deg,transparent,rgba(10,11,13,.82))}
+  .hero-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+  .hero-art .cap{position:absolute;left:0;right:0;bottom:0;padding:22px;background:linear-gradient(180deg,transparent,rgba(10,11,13,.85))}
   .hero-art .cap b{font-family:var(--serif);font-size:22px;font-weight:500;display:block;color:#fff}
   .hero-art .cap span{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
   .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
@@ -80,11 +80,24 @@
   .rescard .lab b{font-family:var(--serif);font-size:20px;color:var(--text);display:block}
   .rescard .lab span{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
   .rescard .num{position:absolute;top:16px;left:18px;font-family:var(--serif);font-size:34px;color:rgba(205,183,158,.4)}
+  /* surgery band, real theatre photo */
+  .theatre{position:relative;border-radius:10px;overflow:hidden;min-height:340px;display:flex;align-items:flex-end;border:1px solid var(--line);box-shadow:0 40px 80px -50px #000}
+  .theatre img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 42%}
+  .theatre .scrim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,11,13,.86),rgba(10,11,13,.32) 70%,transparent)}
+  .theatre .copy{position:relative;padding:44px 40px;max-width:560px}
+  .theatre .copy h3{font-family:var(--serif);font-size:30px;font-weight:500;margin-bottom:10px}
+  .theatre .copy p{color:var(--nude);font-size:15px}
+  /* team member with photo */
+  .teamrow{display:flex;align-items:center;gap:18px;margin-top:26px;padding:18px;border:1px solid var(--line);border-radius:10px;background:var(--surf)}
+  .teamrow .ph{width:74px;height:74px;border-radius:50%;overflow:hidden;flex-shrink:0;border:1px solid var(--line)}
+  .teamrow .ph img{width:100%;height:100%;object-fit:cover}
+  .teamrow .tx b{font-family:var(--serif);font-size:18px;color:var(--text);display:block}
+  .teamrow .tx span{font-size:13px;color:var(--muted)}
   .doc{display:grid;grid-template-columns:.92fr 1.08fr;gap:52px;align-items:center}
   .doc .pf{border-radius:8px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 60px -36px #000;border:1px solid var(--line);position:relative;
     background:radial-gradient(360px 300px at 60% 18%,rgba(201,168,106,.26),transparent 60%),linear-gradient(160deg,#1c1f26,#101216 80%)}
-  .doc .pf .mono{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);font-family:var(--serif);font-size:96px;color:var(--champ);opacity:.85}
-  .doc .pf .nm{position:absolute;left:22px;right:22px;bottom:22px}
+  .doc .pf img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 24%}
+  .doc .pf .nm{position:absolute;left:22px;right:22px;bottom:22px;padding-top:40px;background:linear-gradient(180deg,transparent,rgba(10,11,13,.82))}
   .doc .pf .nm b{font-family:var(--serif);font-size:24px;color:#fff;display:block}
   .doc .pf .nm span{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
   .cred{list-style:none;margin-top:20px}
@@ -135,8 +148,7 @@
     <a href="#treatments" class="btn-ghost btn" style="margin-left:10px">Explore treatments</a>
   </div>
   <div class="hero-art reveal in">
-    <div class="lines"></div>
-    <div class="mark">✦</div>
+    <img src="proof/mittal.jpg" alt="Dr Manish Mittal, founder and GMC-registered surgeon at Mittal Hair Clinic">
     <div class="cap"><b>Every plan starts with a consultation</b><span>Dr Manish Mittal · Founder</span></div>
   </div>
 </div></header>
@@ -169,7 +181,7 @@
 
 <section id="founder" style="background:var(--bg2)"><div class="wrap doc">
   <div class="pf reveal">
-    <div class="mono">MM</div>
+    <img src="proof/mittal.jpg" alt="Dr Manish Mittal, founder and GMC-registered surgeon">
     <div class="nm"><b>Dr Manish Mittal</b><span>Founder · GMC-registered surgeon</span></div>
   </div>
   <div class="reveal">
@@ -182,6 +194,22 @@
       <li>Restoration-led, natural-results approach to hair</li>
       <li>Committed to transparency, safety and honest advice</li>
     </ul>
+    <div class="teamrow reveal">
+      <div class="ph"><img src="proof/tech.jpg" alt="Senior hair-transplant technician at Mittal Hair Clinic"></div>
+      <div class="tx"><b>A senior clinical team</b><span>Experienced hair-transplant technicians supporting Dr Mittal through every procedure</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="theatre reveal">
+    <img src="proof/surgery.jpg" alt="Dr Manish Mittal in the surgical theatre at Mittal Hair Clinic">
+    <div class="scrim"></div>
+    <div class="copy">
+      <div class="eyebrow">In theatre</div>
+      <h3>The surgeon plans it, and is involved in performing it.</h3>
+      <p>Hair restoration is surgery. At Mittal Hair Clinic the procedure is planned and carried out under the care of Dr Manish Mittal, a GMC-registered surgeon, with an experienced clinical team alongside.</p>
+    </div>
   </div>
 </div></section>
 
